@@ -20,14 +20,14 @@ def generate_messages():
         make_message("Fifth message"),
     ]
     for msg in messages:
-        print("Hello Server Sending you the %s" % msg.message)
+        print("Hello Server, Sending you the %s" % msg.message)
         yield msg
 
 
 def send_message(stub):
     responses = stub.GetServerResponse(generate_messages())
     for response in responses:
-        print("Hello from the server received your %s" % response.message)
+        print("Hello from the server, received your %s" % response.message)
 
 
 def run():
